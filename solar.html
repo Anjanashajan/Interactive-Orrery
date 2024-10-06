@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Orrery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/background.css">
+</head>
+<body>
+    <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+    </div>
+
+    <h1>Solar System Orrery</h1>
+    
+        
+        
+    
+    
+    <!-- Control panel for UI elements -->
+    <div id="controls">
+        <button id="toggleLabels">Toggle Labels</button>
+        <button id="toggleOrbits">Toggle Orbits</button>
+        <button id="zoomIn">Zoom In</button>
+        <button id="zoomOut">Zoom Out</button>
+        <button id="fetchNEO">Fetch NEO Data</button> <!-- Fetch NEO Data Button -->
+        <label for="speedControl">Speed Multiplier:</label>
+        <input type="range" id="speedControl" min="0.1" max="5" step="0.1" value="1">
+    </div>
+    
+    
+    <!-- Container for Three.js scene -->
+    <div id="scene-container"></div>
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/renderers/CSS2DRenderer.js"></script>
+    
+    <!-- Include the main script -->
+    <script src="script.js"></script>
+</body>
+</html>

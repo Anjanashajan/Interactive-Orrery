@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+.exploration-section {
+    display: flex;
+    align-items: center;
+    margin: 20px auto; /* Center the section */
+}
+
+.explorer-image {
+    width: 600px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 20px; /* Space between the image and the speech bubble */
+}
+
+.speech-bubble {
+    position: relative;
+    background-color: #f0f0f0;
+    color: #000;
+    border-radius: 100px;
+    padding: 100px 150px;
+    width: 300px;
+    height: 100px; /* Set a maximum width for the bubble */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+    margin-bottom: 50px; /* Space between the image and speech bubble */
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100px; /* Adjust to position the triangle */
+    left: -10px; /* Adjust to position the triangle */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #f0f0f0 transparent transparent; /* Triangle color */
+}
+
+
+h1 {
+    margin-top: 20px;
+}
+
+#gameCanvas {
+    display: block;
+    margin: 20px auto;
+    background-color: #000;
+    border: 2px solid white;
+}
+
+#infoPanel {
+    margin-top: 20px;
+}
+
+#planetInfo {
+    margin-top: 10px;
+    font-size: 30px;
+    color: rgb(8, 230, 38);
+}

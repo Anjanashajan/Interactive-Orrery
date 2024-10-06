@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.astronaut img {
+    width: 150px;
+}
+
+.speech-bubble {
+    background: #f0f0f0;
+    color: black;
+    border-radius: 10px;
+    padding: 15px;
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #f0f0f0 transparent transparent transparent;
+}
+
+.explore-button button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.explore-button button:hover {
+    background-color: #0056b3;
+}
+
+.planet-info-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.planet-slide {
+    display: none;
+}
+
+.planet-slide.active {
+    display: block;
+}
+
+.planet-img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.planet-details h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.planet-details p {
+    font-size: 16px;
+}
+
+#nextPlanet {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#nextPlanet:hover {
+    background-color: #0056b3;
+}

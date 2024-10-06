@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Exploration Game</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+    </div>
+    
+    <div class="exploration-section">
+        <img src="images/astro.png" alt="Explorer Image" class="explorer-image">
+        <ul>
+        <li><div class="speech-bubble">
+            Hi, welcome! Let's explore!
+        </div></li>
+        <li><div class="speech-bubble">
+           Use Arrow keys to move spaceship 
+        </div></li>
+    </ul>
+    </div>
+    <h1>Space Exploration Game</h1>
+    <div id="planetInfo">Explore planets to learn more!</div>
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Display Score and Planet Info -->
+    <div id="infoPanel">
+        <h2>Score: <span id="score">0</span></h2>
+        
+    </div>
+
+    <script>
+        // JavaScript to display conversation step by step
+        document.addEventListener('DOMContentLoaded', function() {
+            const dialogs = [
+                document.getElementById('dialog1'),
+                document.getElementById('dialog2'),
+                document.getElementById('dialog3'),
+                document.getElementById('dialog4')
+            ];
+            const exploreButton = document.getElementById('exploreButton');
+            let currentDialog = 0;
+
+            // Function to show the next dialogue
+            function showNextDialog() {
+                if (currentDialog < dialogs.length) {
+                    dialogs[currentDialog].style.display = 'block'; // Show current dialog
+                    currentDialog++;
+                    setTimeout(showNextDialog, 3000); // Move to next dialog after 3 seconds
+                } else {
+                    exploreButton.parentElement.style.display = 'block'; // Show button after the last dialog
+                }
+            }
+
+            // Start conversation
+            showNextDialog();
+
+            // Handle Explore button click
+            exploreButton.addEventListener('click', function() {
+                window.location.href = 'game.html'; // Correct path to Solar System page
+            });
+        });
+    </script>
+
+    <script src="game.js"></script>
+</body>
+</html>
